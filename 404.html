@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ideaX – Redirecting...</title>
+    <script type="text/javascript">
+      // GitHub Pages Single Page App Redirect Trick
+      // Supports both project pages (/ideax-service-ui/) and custom domains
+      var segment = window.location.pathname.split('/')[1];
+      var isProjectPage = segment === 'ideax-service-ui';
+      var pathSegmentsToKeep = isProjectPage ? 1 : 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body style="background-color: #080808; color: #FFFFFF; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <p>Redirecting to ideaX...</p>
+  </body>
+</html>
