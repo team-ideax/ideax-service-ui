@@ -1,0 +1,52 @@
+[
+  {
+    "id": "REV001",
+    "customerName": "Arunachalam Raman",
+    "feedback": "ideaX transformed our messy manual warehouse tracking into an automated, lightning-fast platform. Their communication throughout the sprints was exceptional and the delivery was right on schedule.",
+    "projectName": "Enterprise Logistics & Fleet Tracker",
+    "rating": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
+    "reviewDate": "2026-10-15",
+    "published": true
+  },
+  {
+    "id": "REV002",
+    "customerName": "Dr. Sarah Jenkins",
+    "feedback": "The hospital portal built by ideaX simplified our OPD queues and patient check-ins tremendously. Doctors and nurses adopted it effortlessly. Superb technical craftsmanship and clean architecture.",
+    "projectName": "Smart Hospital Management System",
+    "rating": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop",
+    "reviewDate": "2026-10-28",
+    "published": true
+  },
+  {
+    "id": "REV003",
+    "customerName": "Vikram Sethi",
+    "feedback": "Outstanding AI integration! The data analysis dashboard they engineered gives us actionable business intelligence reports in real-time. Truly turning our ideas into production software.",
+    "projectName": "AI Business Intelligence Platform",
+    "rating": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
+    "reviewDate": "2026-11-02",
+    "published": true
+  },
+  {
+    "id": "REV004",
+    "customerName": "Meera Patel",
+    "feedback": "We were looking for a software partner that doesn't just write code, but understands startup business velocity. ideaX delivered our MVP within 4 weeks. Highly recommended!",
+    "projectName": "Cloud IDE Workspace",
+    "rating": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
+    "reviewDate": "2026-11-05",
+    "published": true
+  },
+  {
+    "id": "REV005",
+    "customerName": "Karthik Subramanian",
+    "feedback": "The desktop Java inventory application is rock solid. Zero crashes even during our highest volume festive sales rush.",
+    "projectName": "High-Throughput Inventory Engine",
+    "rating": 4,
+    "imageUrl": "",
+    "reviewDate": "2026-11-07",
+    "published": false
+  }
+]

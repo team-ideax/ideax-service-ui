@@ -1,0 +1,80 @@
+[
+  {
+    "id": "PRJ001",
+    "title": "AI Business Intelligence Platform",
+    "description": "An AI-powered platform for analysing complex business datasets, uncovering real-time trends, and auto-generating executive summaries.",
+    "detailedDescription": "Designed for enterprise data analysts, this platform integrates automated dataset parsing, real-time metric calculation, and generative AI summarization. Users can connect their CSV or SQL databases, ask natural-language questions, and receive publication-ready charts and actionable insights within seconds.",
+    "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "category": "AI/ML",
+    "technologies": ["React", "Python", "Pandas", "Gemini API", "FastAPI"],
+    "demoUrl": "https://demo.ideax.dev/bi-intelligence",
+    "repositoryUrl": "https://github.com/ideax-dev/ai-business-intelligence",
+    "featured": true,
+    "published": true
+  },
+  {
+    "id": "PRJ002",
+    "title": "Enterprise Logistics & Fleet Tracker",
+    "description": "Real-time dispatch, route optimization, and live telematics dashboard built for regional logistics providers.",
+    "detailedDescription": "A mission-critical fleet management solution handling 500+ active commercial vehicles. Features sub-second telemetry updates, geospatial fence notifications, fuel efficiency analysis, and driver performance logging.",
+    "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
+    "category": "Full Stack Applications",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Socket.io", "Mapbox GL"],
+    "demoUrl": "https://demo.ideax.dev/logistics-tracker",
+    "repositoryUrl": "https://github.com/ideax-dev/fleet-tracker-pro",
+    "featured": true,
+    "published": true
+  },
+  {
+    "id": "PRJ003",
+    "title": "Cloud IDE & Developer Code Workspace",
+    "description": "In-browser collaborative code editor featuring instant runtime execution, live syntax linting, and Git synchronization.",
+    "detailedDescription": "Engineered for development teams and coding bootcamps, this cloud workspace brings full VS Code style capabilities to the web browser. Supports multi-file project workspaces, virtual terminals, and instant preview sandboxes.",
+    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+    "category": "Developer Tools",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Monaco Editor", "Docker"],
+    "demoUrl": "https://demo.ideax.dev/code-workspace",
+    "repositoryUrl": "https://github.com/ideax-dev/cloud-workspace",
+    "featured": true,
+    "published": true
+  },
+  {
+    "id": "PRJ004",
+    "title": "Smart Hospital Management System",
+    "description": "Modern healthcare portal streamlining patient triage, OPD queues, electronic health records (EHR), and billing.",
+    "detailedDescription": "A HIPAA-compliant clinical administration suite providing digital patient onboarding, physician appointment calendars, automated diagnostic lab dispatch, and pharmacy inventory replenishment workflows.",
+    "imageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop",
+    "category": "Web Development",
+    "technologies": ["React", "Tailwind CSS", "Spring Boot", "MySQL", "Chart.js"],
+    "demoUrl": "https://demo.ideax.dev/medicare-system",
+    "repositoryUrl": "https://github.com/ideax-dev/hospital-portal",
+    "featured": false,
+    "published": true
+  },
+  {
+    "id": "PRJ005",
+    "title": "High-Throughput Inventory Engine",
+    "description": "Enterprise desktop and server utility built in Java for high-speed barcode scanning, warehouse reconciliation, and accounting sync.",
+    "detailedDescription": "Engineered for manufacturing and wholesale hubs, this application processes tens of thousands of stock transactions per second with transactional ACID guarantees, PDF manifest generation, and offline replication.",
+    "imageUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop",
+    "category": "Java Applications",
+    "technologies": ["Java 17", "JavaFX", "Spring Framework", "SQLite", "JFreeChart"],
+    "demoUrl": "",
+    "repositoryUrl": "https://github.com/ideax-dev/java-inventory-core",
+    "featured": false,
+    "published": true
+  },
+  {
+    "id": "PRJ006",
+    "title": "Automated Document Vision & OCR Extractor",
+    "description": "Deep learning microservice scanning invoices, IDs, and contracts to extract structured key-value data with 99.4% precision.",
+    "detailedDescription": "Solves manual data entry for financial firms by combining computer vision document de-warping with transformer-based visual question answering, directly syncing structured JSON outputs into ERP systems.",
+    "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    "category": "AI/ML",
+    "technologies": ["Python", "PyTorch", "OpenCV", "Tesseract", "FastAPI"],
+    "demoUrl": "https://demo.ideax.dev/docu-ocr",
+    "repositoryUrl": "https://github.com/ideax-dev/doc-vision-ocr",
+    "featured": false,
+    "published": true
+  }
+]

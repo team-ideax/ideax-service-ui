@@ -1,0 +1,35 @@
+{
+  "businessName": "ideaX",
+  "tagline": "Turning Ideas Into Software",
+  "email": "team.ideax@gmail.com",
+  "phone": "+91 9345746981",
+  "phoneRaw": "+919345746981",
+  "enquiryForm": "https://forms.gle/8RsBqNQtjr6ToifQ7",
+  "whatsappUrl": "https://wa.me/919345746981",
+  "theme": {
+    "primary": "#FFD400",
+    "background": "#080808",
+    "card": "#151515",
+    "text": "#FFFFFF",
+    "muted": "#B8B8B8",
+    "border": "#303030"
+  },
+  "about": {
+    "introduction": "ideaX transforms ideas into practical software solutions through thoughtful planning, modern technologies and reliable development practices.",
+    "mission": "Empowering ambitious entrepreneurs, businesses, and creators by transforming raw concepts into robust, scalable, and intuitive software products.",
+    "approach": "We follow a disciplined engineering process combining rapid prototyping, clean architecture, automated testing, and transparent communication.",
+    "stats": [
+      { "label": "Projects Completed", "value": "35+" },
+      { "label": "Client Satisfaction", "value": "99%" },
+      { "label": "Average Turnaround", "value": "3-6 Wks" },
+      { "label": "Ongoing Support", "value": "24/7" }
+    ]
+  },
+  "socialLinks": {
+    "github": "https://github.com/",
+    "linkedin": "https://linkedin.com/",
+    "twitter": "https://twitter.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "footerText": "ideaX – Turning Ideas Into Software. All rights reserved."
+}

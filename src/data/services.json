@@ -1,0 +1,74 @@
+[
+  {
+    "id": "SRV001",
+    "title": "Web Application Development",
+    "description": "High-performance, responsive single-page and multi-page web applications built with modern frontend frameworks and intuitive UX.",
+    "icon": "Globe",
+    "technologies": ["React", "Vite", "Next.js", "Tailwind CSS", "TypeScript"],
+    "features": [
+      "Responsive & mobile-first architecture",
+      "Fast page load & SEO optimized",
+      "Dynamic dashboards & portals"
+    ]
+  },
+  {
+    "id": "SRV002",
+    "title": "Mobile Application Development",
+    "description": "Cross-platform and native mobile apps that deliver fluid user experiences across Android and iOS devices.",
+    "icon": "Smartphone",
+    "technologies": ["React Native", "Flutter", "Android", "iOS", "Firebase"],
+    "features": [
+      "Unified codebase for Android & iOS",
+      "Offline sync & push notifications",
+      "App Store & Play Store deployment"
+    ]
+  },
+  {
+    "id": "SRV003",
+    "title": "Desktop Application Development",
+    "description": "Cross-platform desktop software designed for enterprise productivity, data processing, and seamless OS integration.",
+    "icon": "Monitor",
+    "technologies": ["JavaFX", "Electron", "Tauri", "C# .NET", "Python"],
+    "features": [
+      "Native OS capabilities & speed",
+      "Offline-first local file management",
+      "Automated auto-update integration"
+    ]
+  },
+  {
+    "id": "SRV004",
+    "title": "Backend and API Development",
+    "description": "Secure, scalable RESTful & GraphQL backend services and microservices engineered for high throughput and reliability.",
+    "icon": "Server",
+    "technologies": ["Node.js", "Express", "Spring Boot", "PostgreSQL", "MongoDB"],
+    "features": [
+      "Robust REST & GraphQL APIs",
+      "Role-based access control & JWT auth",
+      "Cloud database modeling & caching"
+    ]
+  },
+  {
+    "id": "SRV005",
+    "title": "AI & Machine Learning Solutions",
+    "description": "Intelligent agents, predictive analytics models, and natural language interfaces tailored to automate business workflows.",
+    "icon": "Cpu",
+    "technologies": ["Python", "PyTorch", "OpenAI / Gemini API", "Pandas", "Scikit-Learn"],
+    "features": [
+      "Custom LLM & RAG integrations",
+      "Automated document processing",
+      "Data mining & predictive insights"
+    ]
+  },
+  {
+    "id": "SRV006",
+    "title": "Custom Software Projects",
+    "description": "Bespoke end-to-end software systems engineered precisely around your business requirements from conception to deployment.",
+    "icon": "Code2",
+    "technologies": ["Full Stack", "Cloud Native", "Docker", "CI/CD", "Git"],
+    "features": [
+      "Tailor-made solution architecture",
+      "Legacy system migration & modernization",
+      "Comprehensive warranty & tech support"
+    ]
+  }
+]
