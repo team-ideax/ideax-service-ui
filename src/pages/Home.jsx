@@ -182,7 +182,7 @@ export default function Home() {
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-brand-border/60">
               {(settings.about?.stats || [
-                { label: 'Projects Completed', value: '35+' },
+                { label: 'Projects Completed', value: '3+' },
                 { label: 'Client Satisfaction', value: '99%' },
                 { label: 'Average Delivery', value: '3-6 Wks' },
                 { label: 'Dedicated Support', value: '24/7' },

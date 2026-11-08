@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoTransparent from '../assets/images/ideax-logo-transparent.png';
+import logoCropped from '../assets/images/ideax-logo-cropped.png';
+import iconImg from '../assets/images/ideax-x-icon.png';
 
 export default function BrandLogo({ size = 'md', showTagline = false, to = '/', variant = 'full' }) {
   const logoHeights = {
@@ -21,15 +24,13 @@ export default function BrandLogo({ size = 'md', showTagline = false, to = '/', 
     const iconContent = (
       <div className={`relative flex items-center justify-center rounded-xl bg-[#141414] border border-brand-border hover:border-brand-yellow/60 transition-all p-1.5 shadow-md ${iconSizes[size] || iconSizes.md}`}>
         <img
-          src="/images/ideax-x-icon.png"
+          src={iconImg}
           alt="ideaX"
           className="w-full h-full object-contain"
           onError={(e) => {
-            // SVG fallback
             e.currentTarget.style.display = 'none';
           }}
         />
-        {/* Vector fallback if image doesn't load */}
         <svg viewBox="0 0 100 100" fill="none" className="w-full h-full hidden">
           <path d="M 20 80 L 38 80 L 68 50 L 38 20 L 20 20 L 44 50 Z" fill="#FFC000" />
           <path d="M 64 20 L 82 20 L 64 50 L 53 35 Z" fill="#FFFFFF" />
@@ -48,13 +49,12 @@ export default function BrandLogo({ size = 'md', showTagline = false, to = '/', 
     <div className="flex flex-col group select-none">
       <div className="flex items-center">
         <img
-          src="/images/ideax-logo-transparent.png"
+          src={logoTransparent}
           alt="ideaX - Turning Ideas Into Software"
           className={`${logoHeights[size] || logoHeights.md} w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]`}
           onError={(e) => {
-            // Fallback to inline SVG/HTML representation
             e.currentTarget.onerror = null;
-            e.currentTarget.src = '/images/ideax-logo-cropped.png';
+            e.currentTarget.src = logoCropped;
           }}
         />
       </div>

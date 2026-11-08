@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>ideaX – Redirecting...</title>
     <script type="text/javascript">
-      // GitHub Pages SPA redirect trick
-      // Stores requested path into session storage and redirects to the base URL
-      var pathSegmentsToKeep = 0;
+      // GitHub Pages Single Page App Redirect Trick
+      // Supports both project pages (/ideax-service-ui/) and custom domains
+      var segment = window.location.pathname.split('/')[1];
+      var isProjectPage = segment === 'ideax-service-ui';
+      var pathSegmentsToKeep = isProjectPage ? 1 : 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
