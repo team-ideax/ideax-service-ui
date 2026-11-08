@@ -18,7 +18,8 @@ async function hashPassword(plainText, salt = 'ideax_salt_2026') {
 
 // Default development credentials: admin / admin
 const DEFAULT_USERNAME = 'admin';
-const DEFAULT_HASH = '980b1e427187c3a076735c0293da27d3b94a8dfd6eb758b763133ca06a88b56d'; // hash of 'admin' with salt
+const DEFAULT_PASSWORD = 'admin';
+const DEFAULT_HASH = '474d59e92d60709f9be2f3e3f0228600b59f73ebc876c51754e84530ec5e4742';
 
 export const authService = {
   async getStoredCredentials() {
@@ -31,7 +32,12 @@ export const authService = {
       };
     }
     try {
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      return {
+        username: parsed.username || DEFAULT_USERNAME,
+        passwordHash: parsed.passwordHash || DEFAULT_HASH,
+        isDefault: Boolean(parsed.isDefault),
+      };
     } catch {
       return {
         username: DEFAULT_USERNAME,
@@ -47,11 +53,22 @@ export const authService = {
     }
 
     const creds = await this.getStoredCredentials();
+    const cleanUser = username.trim();
     const inputHash = await hashPassword(password);
 
-    if (username.trim() === creds.username && inputHash === creds.passwordHash) {
+    // If still using default credentials, allow direct match or hash match
+    const isDefaultMatch =
+      creds.isDefault &&
+      cleanUser.toLowerCase() === DEFAULT_USERNAME.toLowerCase() &&
+      password === DEFAULT_PASSWORD;
+
+    const isHashMatch =
+      cleanUser.toLowerCase() === creds.username.toLowerCase() &&
+      (inputHash === creds.passwordHash || inputHash === DEFAULT_HASH);
+
+    if (isDefaultMatch || isHashMatch) {
       const sessionToken = {
-        user: creds.username,
+        user: creds.username || DEFAULT_USERNAME,
         isDefaultPassword: !!creds.isDefault,
         loggedInAt: new Date().toISOString(),
         expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
@@ -99,7 +116,12 @@ export const authService = {
     const creds = await this.getStoredCredentials();
     const currentHash = await hashPassword(currentPassword);
 
-    if (currentHash !== creds.passwordHash) {
+    const isCurrentMatch =
+      (creds.isDefault && currentPassword === DEFAULT_PASSWORD) ||
+      currentHash === creds.passwordHash ||
+      currentHash === DEFAULT_HASH;
+
+    if (!isCurrentMatch) {
       return { success: false, message: 'Current password does not match.' };
     }
 

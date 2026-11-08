@@ -1,41 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function BrandLogo({ size = 'md', showTagline = false, to = '/' }) {
+export default function BrandLogo({ size = 'md', showTagline = false, to = '/', variant = 'full' }) {
+  const logoHeights = {
+    sm: 'h-7',
+    md: 'h-8 sm:h-9',
+    lg: 'h-11 sm:h-12',
+    xl: 'h-16',
+  };
+
   const iconSizes = {
     sm: 'w-7 h-7',
     md: 'w-9 h-9',
     lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
   };
 
-  const textSizes = {
-    sm: 'text-xl',
-    md: 'text-2xl',
-    lg: 'text-3xl',
-  };
-
-  const content = (
-    <div className="flex items-center gap-3 group select-none">
-      {/* Brand Icon SVG */}
-      <div className={`relative flex items-center justify-center rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] border border-brand-border group-hover:border-brand-yellow/60 transition-all duration-300 shadow-lg ${iconSizes[size] || iconSizes.md}`}>
-        <svg viewBox="0 0 100 100" fill="none" className="w-4/5 h-4/5">
-          <circle cx="50" cy="50" r="32" fill="#FFD400" fillOpacity="0.15" />
-          <path d="M28 28L44 48L28 72H38L49 54L60 72H72L55 48L70 28H59L49 42L39 28H28Z" fill="#FFD400" />
-          <circle cx="50" cy="22" r="6" fill="#FFFFFF" />
+  // If icon-only variant is requested
+  if (variant === 'icon') {
+    const iconContent = (
+      <div className={`relative flex items-center justify-center rounded-xl bg-[#141414] border border-brand-border hover:border-brand-yellow/60 transition-all p-1.5 shadow-md ${iconSizes[size] || iconSizes.md}`}>
+        <img
+          src="/images/ideax-x-icon.png"
+          alt="ideaX"
+          className="w-full h-full object-contain"
+          onError={(e) => {
+            // SVG fallback
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+        {/* Vector fallback if image doesn't load */}
+        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full hidden">
+          <path d="M 20 80 L 38 80 L 68 50 L 38 20 L 20 20 L 44 50 Z" fill="#FFC000" />
+          <path d="M 64 20 L 82 20 L 64 50 L 53 35 Z" fill="#FFFFFF" />
+          <path d="M 64 80 L 82 80 L 64 50 L 53 65 Z" fill="#FFFFFF" />
         </svg>
       </div>
+    );
 
-      {/* Brand Typography */}
-      <div className="flex flex-col">
-        <span className={`font-extrabold tracking-tight text-white flex items-center ${textSizes[size] || textSizes.md}`}>
-          idea<span className="text-brand-yellow">X</span>
-        </span>
-        {showTagline && (
-          <span className="text-[10px] tracking-wider uppercase text-brand-muted font-medium -mt-1">
-            Turning Ideas Into Software
-          </span>
-        )}
+    return to ? <Link to={to} className="inline-block">{iconContent}</Link> : iconContent;
+  }
+
+  // Full Wordmark with exact official logo from user specification:
+  // - lowercase 'idea' with yellow dot on 'i'
+  // - stylized 'x' with yellow left chevron '>' and white right arms
+  const content = (
+    <div className="flex flex-col group select-none">
+      <div className="flex items-center">
+        <img
+          src="/images/ideax-logo-transparent.png"
+          alt="ideaX - Turning Ideas Into Software"
+          className={`${logoHeights[size] || logoHeights.md} w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]`}
+          onError={(e) => {
+            // Fallback to inline SVG/HTML representation
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = '/images/ideax-logo-cropped.png';
+          }}
+        />
       </div>
+      {showTagline && (
+        <span className="text-[10px] tracking-wider uppercase text-brand-muted font-medium -mt-0.5">
+          Turning Ideas Into Software
+        </span>
+      )}
     </div>
   );
 

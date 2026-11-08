@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Yellow Chevron (Left half of X) -->
+  <path d="M12 85 L36 85 L70 50 L36 15 L12 15 L46 50 Z" fill="#FFC000" />
+  
+  <!-- White Top-Right Arm -->
+  <path d="M64 15 L88 15 L66 50 L53 50 Z" fill="#FFFFFF" />
+  
+  <!-- White Bottom-Right Arm -->
+  <path d="M64 85 L88 85 L66 50 L53 50 Z" fill="#FFFFFF" />
+</svg>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { background: #080808; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 40px; font-family: 'Poppins', sans-serif; }
+    .row { display: flex; align-items: center; gap: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Comparison: SVG Recreation vs Official Logo Image</h2>
+  
+  <div class="row">
+    <div>
+      <p style="text-align: center; color: #FFD400;">Official Uploaded Logo (Image)</p>
+      <img src="../public/images/ideax-logo.jpg" style="height: 120px; border: 1px solid #333; border-radius: 16px;" />
+    </div>
+
+    <div>
+      <p style="text-align: center; color: #FFD400;">Custom SVG 'x' Vector</p>
+      <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+        <!-- Yellow Chevron (Left half of X with right-pointing arrow) -->
+        <path d="M 14 84 L 36 84 L 70 50 L 36 16 L 14 16 L 40 50 Z" fill="#FFC000" />
+        
+        <!-- White Top-Right Arm -->
+        <path d="M 64 16 L 86 16 L 62 50 L 70 50 Z" fill="#FFFFFF" />
+        
+        <!-- White Bottom-Right Arm -->
+        <path d="M 64 84 L 86 84 L 62 50 L 70 50 Z" fill="#FFFFFF" />
+      </svg>
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid #333; padding-top: 20px; text-align: center;">
+    <p style="color: #FFD400;">Full Wordmark SVG:</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 64px; font-weight: 800; letter-spacing: -2px;">
+      <span style="color: #FFC000; margin-right: -4px;">i</span>
+      <span style="color: #FFFFFF;">dea</span>
+      <svg width="60" height="64" viewBox="0 0 100 100" fill="none" style="margin-left: 2px;">
+        <path d="M 14 84 L 36 84 L 70 50 L 36 16 L 14 16 L 40 50 Z" fill="#FFC000" />
+        <path d="M 64 16 L 86 16 L 62 50 L 70 50 Z" fill="#FFFFFF" />
+        <path d="M 64 84 L 86 84 L 62 50 L 70 50 Z" fill="#FFFFFF" />
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

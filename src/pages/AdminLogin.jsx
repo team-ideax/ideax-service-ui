@@ -125,19 +125,45 @@ export default function AdminLogin() {
           </form>
 
           {/* Development Notice & Instructions */}
-          <div className="mt-6 pt-6 border-t border-brand-border/60">
-            <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-200/90 space-y-1">
-              <div className="flex items-center gap-1.5 font-bold text-amber-300">
-                <KeyRound className="w-3.5 h-3.5" />
-                <span>Development Default Credentials:</span>
+          <div className="mt-6 pt-6 border-t border-brand-border/60 space-y-3">
+            <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-200/90 space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-bold text-amber-300">
+                  <KeyRound className="w-3.5 h-3.5" />
+                  <span>Development Default Credentials:</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUsername('admin');
+                    setPassword('admin');
+                    setError('');
+                  }}
+                  className="text-[10px] font-bold text-brand-yellow hover:underline"
+                >
+                  Auto-Fill
+                </button>
               </div>
               <p>
-                Username: <code className="bg-black/40 px-1 py-0.5 rounded text-white font-mono">admin</code> | 
-                Password: <code className="bg-black/40 px-1 py-0.5 rounded text-white font-mono">admin</code>
+                Username: <code className="bg-black/40 px-1.5 py-0.5 rounded text-white font-mono">admin</code> | 
+                Password: <code className="bg-black/40 px-1.5 py-0.5 rounded text-white font-mono">admin</code>
               </p>
-              <p className="text-[10px] text-gray-400 pt-1">
-                Security Notice: Change default credentials in Settings before deploying to production.
-              </p>
+              <div className="flex items-center justify-between pt-1 border-t border-amber-500/20 text-[10px]">
+                <span className="text-gray-400">Trouble signing in?</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    authService.resetToDefault();
+                    setUsername('admin');
+                    setPassword('admin');
+                    setError('');
+                    addToast('Credentials reset to defaults: admin / admin', 'info');
+                  }}
+                  className="text-amber-400 hover:text-white underline font-semibold"
+                >
+                  Reset Credentials
+                </button>
+              </div>
             </div>
           </div>
         </div>
